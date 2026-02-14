@@ -2,17 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
   "trailingSlash": false,
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/$",
-      "dest": "/index.html",
-      "headers": {
-        "Cache-Control": "no-store, no-cache, must-revalidate"
-      }
-    },
-    {
-      "src": "^(?!/index\\.html$).*$",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
